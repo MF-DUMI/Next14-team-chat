@@ -73,7 +73,7 @@ export const InviteModal = ({
         <DialogHeader>
           <DialogTitle>Invite people to {name}</DialogTitle>
           <DialogDescription>
-            Use the code below to invite people to your workspace
+            Use the code below to invite people to your SyncSpace
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-y-4 items-center justify-center py-10">

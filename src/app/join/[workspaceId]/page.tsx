@@ -61,7 +61,7 @@ const JoinPage = () => {
                         Join {data?.name}
                     </h1>
                     <p className="text-md text-muted-foreground">
-                        Enter the workspace code to join
+                        Enter the SyncSpace code to join
                     </p>
                 </div>
                 <VerificationInput onComplete={handleComplete} length={6} classNames={{

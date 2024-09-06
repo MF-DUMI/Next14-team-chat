@@ -43,7 +43,7 @@ export const WorkspaceHeader =({workspace,isAdmin} : WorkspaceHeaderProps) => {
                             </div>
                             <div className="flex flex-col items-start">
                                 <p className="font-bold">{workspace.name}</p>
-                                <p className="text-xs text-muted-foreground">Active Workspace</p>
+                                <p className="text-xs text-muted-foreground">Active SyncSpace</p>
                             </div>
                         </DropdownMenuItem>
                         {isAdmin && (
