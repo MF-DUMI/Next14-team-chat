@@ -30,7 +30,7 @@ export const CreateWorkspaceModal = () => {
 
         mutate({ name }, {
             onSuccess(id){
-                toast.success("Workspace created")
+                toast.success("SyncSpace created")
                 router.push(`/workspace/${id}`)
                 handleClose();
             },
@@ -43,11 +43,11 @@ export const CreateWorkspaceModal = () => {
             <DialogContent>
                 <DialogHeader>
                     <DialogTitle>
-                        Add a workspace
+                        Add a SyncSpace
                     </DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                    <Input value={name} onChange={(e) => setName(e.target.value)} disabled={isPending} required autoFocus minLength={3} placeholder="Workspace name e.g 'Work', 'Lab', 'Class'."/>
+                    <Input value={name} onChange={(e) => setName(e.target.value)} disabled={isPending} required autoFocus minLength={3} placeholder="SyncSpace name e.g 'Work', 'Lab', 'Class'."/>
                     <div className="flex justify-end">
                         <Button disabled={isPending}>
                             Create

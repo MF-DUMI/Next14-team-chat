@@ -50,8 +50,13 @@ export const WorkspaceSidebar = () => {
         <div className="flex flex-col bg-[#5e2c5f] h-full">
             <WorkspaceHeader workspace={workspace} isAdmin={member.role==="admin"}/>
             <div className="flex flex-col px-2 mt-3">
-                <SidebarItem  label="Threads" icon={MessageSquareText} id="threads" />
-                <SidebarItem  label="Drafts & Sent" icon={SendHorizonal} id="drafts" />
+                <SidebarItem  label="Browse" icon={MessageSquareText} id="threads" />
+                <SidebarItem  label="Rules" icon={SendHorizonal} id="drafts" />
+                {/* <SidebarItem  label="Browse" icon={SearchIcon} id="threads" />
+                <SidebarItem  label="Rules" icon={BookCheck} id="drafts" /> */}
+                <div>
+                    
+                </div>
             </div>
                 <WorkspaceSection label="Channels" hint="New channel" onNew={member.role === "admin" ? ()  => setOpen(true) : undefined}>
                     {channels?.map((item) => (

@@ -44,11 +44,11 @@ export const PreferencesModal = ({
             id:workspaceId
         }, {
             onSuccess: () => {
-                toast.success("Workspace deleted!")
+                toast.success("SyncSpace deleted!")
                 router.replace("/")
             },
             onError: () => {
-                toast.error("Failed to delete workspace")
+                toast.error("Failed to delete SyncSpace")
             }
         })
     }
@@ -62,11 +62,11 @@ export const PreferencesModal = ({
             name: value,
         }, {
             onSuccess: () => {
-                toast.success("Workspace updated!")
+                toast.success("SyncSpace updated!")
                 setEditOpen(false);
             },
             onError: () => {
-                toast.error("Failed to update workspace")
+                toast.error("Failed to update SyncSpace")
             }
         })
     }
@@ -87,7 +87,7 @@ export const PreferencesModal = ({
                                 <div className="px-5 py-4 bg-white rounded-lg border cursor-pointer hover:bg-gray-50">
                                     <div className="flex items-center justify-between">
                                         <p className="text-sm font-semibold">
-                                            Workspace name
+                                            SyncSpace name
                                         </p>
                                         <p className="text-sm text-[#1264a3] hover:underline font-semibold">
                                             Edit
@@ -101,11 +101,11 @@ export const PreferencesModal = ({
                             <DialogContent>
                                 <DialogHeader>
                                     <DialogTitle>
-                                        Rename this workspace
+                                        Rename this SyncSpace
                                     </DialogTitle>
                                 </DialogHeader>
                                 <form className="space-y-4" onSubmit={handleEdit}>
-                                    <Input value={value} disabled={isUpdatingWorkspace}onChange={(e) => setValue(e.target.value)} required autoFocus minLength={3} maxLength={80} placeholder="Workspace name e.g 'Work', 'Lab', 'Class'." />
+                                    <Input value={value} disabled={isUpdatingWorkspace}onChange={(e) => setValue(e.target.value)} required autoFocus minLength={3} maxLength={80} placeholder="SyncSpace name e.g 'Work', 'Lab', 'Class'." />
                                     <DialogFooter>
                                         <DialogClose asChild>
                                             <Button variant="outline" disabled={isUpdatingWorkspace}>
@@ -123,7 +123,7 @@ export const PreferencesModal = ({
                         <button disabled={isRemovingWorkspace} onClick={handleRemove} className="flex items-center gap-x-2 px-5 py-4 bg-white rounded-lg border cursor-pointer hover:bg-gray-50 text-rose-500">
                             <TrashIcon className="size-4"/>
                             <p className="text-sm font-semibold">
-                                Delete workspace
+                                Delete SyncSpace
                             </p>
                         </button>
                     </div>
